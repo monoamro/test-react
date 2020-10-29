@@ -4,16 +4,24 @@ import React, { useEffect, useState } from 'react';
 
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [users, setUsers] = useState(null);
 
   useEffect(() => {
-    axios.get("https://jsonplaceholder.typicode.com/users/1")
+    axios.get("https://jsonplaceholder.typicode.com/users/")
          .then((res) => {
            const { data } = res;
-           console.log(data);
+           setUsers(data);
+            // const { id, email, name, phone, username, website, address, company } = data;
+            // setUser({ id, email, name, phone, username, website, address, company });
+          
           })
          .catch((e) => {console.log(e)});
+        //  console.log("user" ,user);
+        
   }, []);
+
+  
+  console.log("users", users);
   
   return (
     <div className="App">
