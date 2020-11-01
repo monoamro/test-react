@@ -1,7 +1,8 @@
 This page uses different resources, make sure you run the following commands:
 Material UI components:
-// with npm
-npm install @material-ui/core
+
+        Using npm:
+        npm install @material-ui/core
 
         Using yarn:
         yarn add @material-ui/core
