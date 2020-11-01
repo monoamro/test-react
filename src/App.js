@@ -1,6 +1,7 @@
 import './App.css';
 import axios from "axios";
 import React, { useEffect, useState } from 'react';
+import HomePage from './components/HomePage';
 
 
 function App() {
@@ -10,24 +11,16 @@ function App() {
     axios.get("https://jsonplaceholder.typicode.com/users/")
          .then((res) => {
            const { data } = res;
-           setUsers(data);
-            // const { id, email, name, phone, username, website, address, company } = data;
-            // setUser({ id, email, name, phone, username, website, address, company });
-          
+           setUsers(data);          
           })
          .catch((e) => {console.log(e)});
-        //  console.log("user" ,user);
         
   }, []);
 
   
-  console.log("users", users);
-  
   return (
-    <div className="App">
-      
-    </div>
-  );
+    <div>{users && <HomePage users={users}/>}</div>
+  )
 }
 
 export default App;
