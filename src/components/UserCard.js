@@ -13,7 +13,8 @@ const useStyles = makeStyles({
       maxWidth: 250,
       margin: 16,
       textAlign: 'center',
-      boxShadow: '4px 4px 8px lightgray '
+      boxShadow: '4px 4px 8px lightgray',
+      paddingBottom: 16,
     },
     avatar: {
         height: 72,
